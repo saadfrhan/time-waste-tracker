@@ -17,7 +17,14 @@ function asIsoDate(value: string): IsoDateString {
   return value as IsoDateString;
 }
 
-const state = {
+type AppState = {
+  streak: number;
+  secondsReclaimed: number;
+  lastCodedDate: IsoDateString | null;
+  isCodingToday: boolean;
+};
+
+const state: AppState = {
   streak: parseInt(localStorage.getItem("daysStreak") || "0"),
   secondsReclaimed: parseInt(localStorage.getItem("reclaimedTime") || "0"),
   lastCodedDate: localStorage.getItem("lastCodedDate")
