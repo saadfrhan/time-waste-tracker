@@ -137,5 +137,3 @@ if (state.isCodingToday) {
 }
 
 renderStreak();
-
-export {};
